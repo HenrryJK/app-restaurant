@@ -1,0 +1,197 @@
+<!--
+  Cambios Antes :
+  lg:pl-28
+  p-4
+
+Cambios ahora:
+  lg:pl-32
+  pb-20
+ -->
+<main class="lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20">
+  <!-- el padding afecta cuando esta en movil
+    indicarle el responsive la resolucion a partir de:
+    md:p-8
+  -->
+  <div class="lg:col-span-6 md:p-8">
+    <!-- Header -->
+
+    <header >
+          <!-- Titulo y Buscador -->
+          <!-- Responsive  iPad Air
+            md:flex-row
+            md:justify-between
+          -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+
+          <div class="font-notoSerif">
+              <h1 class="text-2xl text-gray-300">Restaurante Enmanuel</h1>
+              <p class="text-gray-500">Martes, 01 de Agosto 2023</p>
+          </div>
+
+          <form action="">
+            <div class="w-full relative">
+              <mat-icon class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-300">search</mat-icon>
+              <input type="text" class="bg-navApp w-full py-2 pl-10 pr-4 rounded-lg text-gray-300 outline-none" placeholder="Search">
+            </div>
+          </form>
+        </div>
+
+        <!-- Tabs -->
+        <!-- en este nav tenia un gap-4 para darle separacion , ahora lo haremos desde los enlaces "a" -->
+        <!-- Cada ves que  usamos justify-between
+          - Debemos usar block en los items.
+        -->
+        <!-- mb-6 para hacer un espacio con div de abajo. -->
+        <!-- En resolucion desktop seria:
+            lg:justify-start
+            lg:gap-8
+
+            mejor que este desde md , desde la resolucion iPad Air
+            md:justify-start
+            md:gap-8
+        -->
+          <nav class="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b font-notoSerif mb-6">
+
+              <a href="#" class="relative py-2 pr-4 text-navItemsUp before:w-1/2 before:h-[2px] before:absolute before:bg-navItemsUp before:left-0 before:rounded-full before:-bottom-[1px]">Hot Dishes</a>
+              <!-- Usando Before
+              1/2 = 50%
+              relative  before:w-1/2 before:h-2 before:absolute
+              -->
+              <a href="#" class="py-2 pr-3">Icreams</a>
+              <a href="#" class="py-2 pr-3">Soup</a>
+              <a href="#" class="py-2 pr-4">Hamburgers</a>
+              <a href="#" class="py-2 pr-4">Grill</a>
+          </nav>
+    </header>
+
+            <!-- Title Content -->
+            <div class="flex items-center justify-between mb-16">
+              <h2 class="text-xl text-gray-300 font-notoSerif">Show Dishes</h2>
+              <button class="flex items-center gap-4 text-gray-300 bg-navApp py-2 px-4 rounded-lg font-notoSerif">
+                Select Category
+                <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+            </div>
+              <!-- Content -->
+              <!-- comment 2: y se puso tambien un padding de 8 al div padre
+                comment: 3 se agregar un flex grid
+                  grid grid-cols-1
+                  gap-14 - pra la separacion de los items que estan en columna
+              -->
+              <!-- Para Resolucion iPad Air
+                  md: grid-cols-2
+               -->
+
+               <!-- un padding bottom
+                   por los items al final chocan con el menu nav del movil
+                    pb-20
+              -->
+
+              <!-- en resolucion desktop
+                lg:grid-cols-3
+              -->
+            <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-20 pb-20 lg:grid-cols-3">
+                      <!-- Card -->
+                      <!-- Centrar un div card
+                        flex
+                        flex-col items-center
+                        antes estaba con un p-8
+                        se aplico un p-12
+                      comment 1:: se olvio a p-8 por le tema de los espacios , el card estaba muy ancho.
+                      -->
+                  <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                      <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/chifa-carne.png" alt="no-food">
+                      <div class="mt-6 text-center">
+                        <p class="text-xl">Arroz Chaufa Mixto</p>
+                        <span class="text-gray-300">Precio: 14.00</span>
+                        <p class="text-gray-600">Stock: 20 bolws avaliable</p>
+                      </div>
+                  </div>
+
+                    <!-- Card -->
+                  <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                        <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/wantan-soup.png" alt="no-food">
+                        <div class="mt-6 text-center">
+                          <p class="text-xl">Sopa Wantan</p>
+                          <span class="text-gray-300">Precio: 13.50</span>
+                          <p class="text-gray-600">Stock: 12 bolws avaliable</p>
+                        </div>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                      <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/lomo-saltado1.png" alt="no-food">
+                      <div class="mt-6 text-center">
+                        <p class="text-xl">Lomo Saltado de Carne</p>
+                        <span class="text-gray-300">Precio: 14.00</span>
+                        <p class="text-gray-600">Stock: 5 bolws avaliable</p>
+                      </div>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                      <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/arroz-chifa-broaster.png" alt="no-food">
+                      <div class="mt-6 text-center">
+                        <p class="text-xl">Arroz Chaufa Broaster</p>
+                        <span class="text-gray-300">Precio: 14.00</span>
+                        <p class="text-gray-600">Stock: 8 bolws avaliable</p>
+                      </div>
+                  </div>
+
+                <!-- Card -->
+                <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                    <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/tallarin-saltado.png" alt="no-food">
+                    <div class="mt-6 text-center">
+                      <p class="text-xl">Tallarín Saltado Chifa</p>
+                      <span class="text-gray-300">Precio: 14.00</span>
+                      <p class="text-gray-600">Stock: 6 bolws avaliable</p>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-navApp p-8 rounded-xl flex flex-col items-center text-gray-300 font-notoSerif">
+                    <img class="w-30 h-40 object-cover -mt-24 shadow-2xl rounded-full" src="../../../../assets/img/ramen-soup-01.png" alt="no-food">
+                    <div class="mt-6 text-center">
+                      <p class="text-xl">Sopa Ramen</p>
+                      <span class="text-gray-300">Precio: 16.50</span>
+                      <p class="text-gray-600">Stock: 8 bolws avaliable</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+   </div>
+  <!-- mobile
+    se agrega un :
+    fixed
+    lg:static
+  -->
+  <!--
+    desde la resolucion movil
+    right-0
+    top-0
+    p-4
+    w-full
+    box-content
+   -->
+    <!-- estilos de redondeado
+        rounded-full
+
+        se cambia valores del left y top:
+        left-4
+        top-4
+        text-xl
+        p-2
+    -->
+    <div class="lg:col-span-2 fixed lg:static right-0 bg-navApp top-0 w-full h-full">
+          <!-- Orders -->
+        <div class="relative pt-16 text-gray-300 p-8">
+            <mat-icon class="absolute left-4 top-4 p-3 box-content text-gray-300 bg-mainApp rounded-full text-xl">close</mat-icon>
+             <h1 class="text-xl mt-4">Order: #A1452</h1>
+             <div>
+                <button>Cenar Aqui</button>
+             </div>
+        </div>
+    </div>
+</main>

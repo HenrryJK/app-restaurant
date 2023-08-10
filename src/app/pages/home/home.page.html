@@ -1,0 +1,95 @@
+
+
+<div class="bg-mainApp w-full min-h-screen">
+  <!-- como separar dos divs que tienen ul : con flex  flex-col justify-between -->
+
+  <!-- Cosas que se añaden cuando se empiza responsive
+    z-50 - es para dar un espaciado
+    -left-full - para que muestre por completo el otro html
+
+    se agrega lg al left-0  quedaria como lg:left-0
+  -->
+  <div class="bg-navApp fixed lg:left-0 top-0 w-28 h-full flex  flex-col justify-between py-3 rounded-tr-xl rounded-br-xl z-50 -left-full">
+    <div>
+      <!-- bg-green-500 -->
+    <ul class="pl-4">
+      <li class="flex justify-center">
+          <img class="h-16 inline my-5" src="../../../assets/img/logo-rest.png" alt="no-image">
+
+      </li>
+      <li class="bg-mainApp p-4 rounded-tl-xl rounded-bl-xl">
+        <!-- block  text-center o flex justify-center -->
+        <a class="bg-navItemsUp p-3  block  text-center rounded-xl text-white transition-colors" href="">
+                                  <!-- rounded-lg -->
+          <mat-icon class="text-2xl">home</mat-icon>
+        </a>
+      </li>
+      <!-- Resto del Nav  -->
+        <!-- Cuando quiere heredar los estilos de un hover , utilizo el group -->
+      <li class="hover:bg-mainApp p-4 rounded-tl-xl rounded-bl-xl group">
+        <!-- block  text-center o flex justify-center -->
+        <!-- Antes de poner el group habia un : text-white  -->
+        <a class="group-hover:bg-navItemsUp p-3  block text-redTxT  text-center rounded-xl group-hover:text-white transition-colors" href="">
+                                  <!-- rounded-lg -->
+          <mat-icon class="text-2xl">equalizer</mat-icon>
+        </a>
+      </li>
+
+      <li class="hover:bg-mainApp p-4 rounded-tl-xl rounded-bl-xl group">
+        <!-- block  text-center o flex justify-center -->
+        <!-- Antes de poner el group habia un : text-white  -->
+        <a class="group-hover:bg-navItemsUp p-3  block text-redTxT  text-center rounded-xl group-hover:text-white transition-colors" href="">
+                                  <!-- rounded-lg -->
+          <mat-icon class="text-2xl">pie_chart</mat-icon>
+        </a>
+      </li>
+
+      <li class="hover:bg-mainApp p-4 rounded-tl-xl rounded-bl-xl group">
+        <!-- block  text-center o flex justify-center -->
+        <!-- Antes de poner el group habia un : text-white  -->
+        <a class="group-hover:bg-navItemsUp p-3  block text-redTxT  text-center rounded-xl group-hover:text-white transition-colors" href="">
+                                  <!-- rounded-lg -->
+          <mat-icon class="text-2xl">mail_outline</mat-icon>
+        </a>
+      </li>
+
+      <li class="hover:bg-mainApp p-4 rounded-tl-xl rounded-bl-xl group">
+        <!-- block  text-center o flex justify-center -->
+        <!-- Antes de poner el group habia un : text-white  -->
+        <a class="group-hover:bg-navItemsUp p-3  block text-redTxT  text-center rounded-xl group-hover:text-white transition-colors" href="">
+                                  <!-- rounded-lg -->
+          <mat-icon class="text-2xl">settings</mat-icon>
+        </a>
+      </li>
+
+
+    </ul>
+    </div>
+
+    <div>
+      <ul class="pl-4">
+        <li class="hover:bg-mainApp p-4 rounded-tl-xl rounded-bl-xl group">
+          <!-- block  text-center o flex justify-center -->
+          <!-- Antes de poner el group habia un : text-white  -->
+          <a class="group-hover:bg-navItemsUp p-3  block text-redTxT  text-center rounded-xl group-hover:text-white transition-colors" href="">
+                                    <!-- rounded-lg -->
+            <mat-icon class="text-2xl">power_settings_new</mat-icon>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+
+  </div>
+
+  <!-- Menu Movil -->
+  <app-home-movil></app-home-movil>
+
+  <!-- Dasboard -->
+  <app-dasboard></app-dasboard>
+
+</div>
+
+
+

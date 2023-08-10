@@ -1,0 +1,29 @@
+<!-- lg: hidden - permite que en cierta resolucion se muestre -->
+<!--
+  se aplica un flex para poder separar los buttons
+  flex items-center
+  justify-between - para darle separacion
+   p-4 - es para darle un padding
+
+ -->
+<nav class="bg-navApp lg:hidden fixed w-full bottom-0 left-0 text-3xl text-gray-400 flex items-center justify-between py-2  px-8 rounded-tl-xl rounded-tr-xl">
+
+  <button class="p-2">
+    <mat-icon>person</mat-icon>
+ </button>
+
+ <button class="p-2">
+  <mat-icon>add_circle_outline</mat-icon>
+</button>
+
+<button class="p-2">
+  <mat-icon>fastfood</mat-icon>
+</button>
+
+<!-- <button onclick="toggleMenu()"  class="text-white p-2"> -->
+<button class="text-white p-2">
+  <mat-icon>menu</mat-icon>
+  <!-- <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon> -->
+</button>
+
+</nav>
